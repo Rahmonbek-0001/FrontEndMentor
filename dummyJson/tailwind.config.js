@@ -3,8 +3,8 @@ export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      backgroundImage: {
-        frontend: 'url(../../imgs/fronted.png)',
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif']
       }
     }
   },

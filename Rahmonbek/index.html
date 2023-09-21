@@ -8,10 +8,19 @@
       * {
         margin: 0;
       }
+      body::-webkit-scrollbar{
+        width: 10px;
+        background: black;
+        scroll-snap-type: mandatory;
+      }
+      body::-webkit-scrollbar-thumb{
+        background: rgb(5 180 200 / var(--tw-bg-opacity));
+        border-radius: 5px;
+      }
     </style>
     <title>Rahmonbek</title>
   </head>
-  <body>
+  <body class="bg-gray-700">
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
