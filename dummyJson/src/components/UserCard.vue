@@ -9,7 +9,7 @@
     />
     <figcaption class="h-[150px] p-2 pt-5 flex flex-col gap-2">
       <div class="flex justify-between gap-2">
-        <p class="w-[50%] overflow-hidden text-ellipsis whitespace-nowrap">FirstName: Sheldon</p>
+        <p class="w-[50%] overflow-hidden text-ellipsis whitespace-nowrap">{{ state.FirstName }}</p>
         <p class="w-[50%] overflow-hidden text-ellipsis whitespace-nowrap">LastName: Quigley</p>
       </div>
       <div class="flex justify-between gap-2">
@@ -38,4 +38,9 @@
     </figcaption>
   </figure>
 </template>
-<script setup></script>
+<script setup>
+import { defineProps } from 'vue';
+import useUser from '../stores/users';
+defineProps(['user'])
+const state = useUser()
+</script>

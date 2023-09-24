@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        frontend: 'url(../../imgs/fronted.png)',
+        frontend: "url(../../imgs/fs.png)",
       }
     }
   },

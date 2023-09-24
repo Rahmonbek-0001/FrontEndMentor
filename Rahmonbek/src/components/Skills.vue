@@ -1,5 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
+  <!-- Skills -->
   <h1 id="contact"></h1>
   <div class="flex flex-wrap gap-4 my-2 mx-2 imgs">
     <div class="html1 grid items-center">
@@ -27,7 +28,7 @@
 </template>
 
 <script>
-export const contact = [{ href: '#contact' }]
+export const contact = [{ href: '#skills' }]
 </script>
 
 <style scoped>

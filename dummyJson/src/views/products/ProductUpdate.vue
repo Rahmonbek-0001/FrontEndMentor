@@ -44,7 +44,8 @@
   </section>
 </template>
 <script setup>
-import { reactive } from 'vue'
+import axios from 'axios'
+import { onMounted, reactive } from 'vue'
 const product = reactive({
   title: '',
   category: '',
@@ -54,9 +55,36 @@ const product = reactive({
 })
 const handleSubmit = async () => {
   try {
-    //
+    if (
+      !product.title.length ||
+      !product.brand.length ||
+      !product.category.length ||
+      !product.price ||
+      !product.description.length
+    ) {
+      alert("input bo'sh qolmasin")
+    }
+    await axios.put(
+      `https://dummyjson.com/products/${params.id}`,
+      JSON.stringify({
+        title: product.title,
+        category: product.category,
+        description: product.description,
+        price: product.price,
+        brand: product.brand
+      })
+    )
   } catch (err) {
     console.log(err)
   }
 }
+const fetchProduct = async () => {
+  const { data } = await axios.get(`https://dummyjson.com/products/${params.id}`)
+  product.title = data.title
+  product.category = data.category
+  product.description = data.description
+  product.brand = data.brand
+  product.price = data.price
+}
+onMounted(() => fetchProduct())
 </script>

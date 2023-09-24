@@ -14,7 +14,7 @@
         <div class="flex flex-col flex-grow justify-between gap-2">
           <div class="flex flex-wrap gap-6">
             <UserCard />
-          </div>
+          </div> 
           <Pagination :totalPages="10" :handleClickPageNumber="() => {}" />
         </div>
       </div>

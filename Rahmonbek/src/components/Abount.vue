@@ -1,12 +1,10 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <h1>Salom</h1>
+  <!-- Abount -->
+  <h1></h1>
 </template>
 
 <script setup>
-
 </script>
 
-<style>
-
-</style>
+<style></style>

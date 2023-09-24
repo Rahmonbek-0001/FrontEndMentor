@@ -1,7 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
+  <!-- Header -->
   <nav
-    class="sticky top-0 z-10 container mx-auto flex flex-wrap justify-between gap-3 bg-gray-800 p-4 text-gray-300"
+    class="sticky top-0 z-10 mx-auto flex flex-wrap justify-between gap-3 bg-gray-800 p-4 text-gray-300 w-[calc(100vw-10px)]"
   >
     <h2
       class="text-2xl font-semibold hover:text-3xl hover:text-cyan-500 border-cyan-400 transition-all duration-500"
@@ -32,25 +33,24 @@
       <li
         class="font-medium hover:text-xl hover:text-cyan-500 hover:border-b-[3px] border-cyan-400 transition-all duration-500 rounded-lg"
       >
-        <a href="#contact">Contact</a>
+        <a href="#skills">Contact</a>
       </li>
     </ul>
   </nav>
+  <!-- Home -->
   <div
-    class="relative -top-[40px] container flex justify-between w-[calc(100vw-10px)] items-center h-[100vh] for-color__header activeHeader"
+    class="relative -top-[40px] flex justify-between w-[100vw] items-center h-[100vh]"
   >
-    <img src="../../imgs/fs.png" class="w-[100%] h-[100%]" alt="" />
+    <img src="../../imgs/fs.png" class=" bg-frontend bg-no-repeat w-[calc(100%-10px)] h-[100%]" alt="" />
     <div class="z-1 absolute">
       <div class="font-bold text-4xl">
         <h2 class="text-white hover:text-cyan-500 duration-1000">Assalomu Aleykum I'm</h2>
         <div class="font-semibold text-6xl py-4 flex flex-wrap">
-          <div class="inline-block text-white hover:text-cyan-500 duration-1000 text-wrap pr-4">
-            Rahmonbek
-          </div>
-          <div class="inline-block text-cyan-500 hover:text-white duration-1000 mb-5">Madminov</div>
+          <div class="text-white hover:text-cyan-500 duration-1000 pr-4">Rahmonbek</div>
+          <div class="text-cyan-500 hover:text-white duration-1000 mb-5">Madminov</div>
         </div>
         <div class="animated-text font-bold">
-          <h3 class="text-gray-600 hover:text-cyan-500 duration-500">Web Developer</h3>
+          <h3 class="text-gray-600 hover:text-white duration-500">Web Developer</h3>
           <h3 class="animated-text__color text-white hover:text-cyan-500 duration-500">
             Programmer
           </h3>
@@ -68,7 +68,7 @@
   </div>
 </template>
 <script setup>
-import contact from './Skills.vue'
+import skills from './Skills.vue'
 </script>
 <style scoped>
 .animated-text {
