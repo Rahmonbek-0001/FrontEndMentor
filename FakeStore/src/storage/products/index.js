@@ -18,7 +18,8 @@ const useProducts = defineStore('products', () => {
         }
       })
       const data = await api.data
-      products.value = data.products
+      console.log(data);
+      products.value = data
       loading.value = false
     } catch (err) {
       console.log(err)
