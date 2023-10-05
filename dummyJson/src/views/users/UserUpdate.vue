@@ -51,7 +51,10 @@
   </section>
 </template>
 <script setup>
-import { reactive } from 'vue'
+import axios from 'axios'
+import { onMounted, reactive } from 'vue'
+import { useRoute } from 'vue-router'
+import router from '../../router'
 const user = reactive({
   firstName: '',
   lastName: '',
@@ -60,11 +63,51 @@ const user = reactive({
   phone: '',
   username: ''
 })
+const { params } = useRoute()
+const fetchUpdateUser = async () => {
+  const { data } = await axios.get('https://dummyjson.com/users/' + params.id)
+  user.firstName = data.firstName
+  user.lastName = data.lastName
+  user.age = data.age
+  user.phone = data.phone
+  user.username = data.username
+  user.email = data.email
+}
 const handleSubmit = async () => {
   try {
-    //
+    if (
+      !user.firstName.length ||
+      !user.age.length ||
+      !user.email.length ||
+      !user.lastName.length ||
+      !user.username.length ||
+      !user.phone.length
+    ) {
+      alert(`Please fill all fields `)
+      return
+    }
+    const { status } = await axios.put(
+      'https://dummyjson.com/users/' + params.id,
+      JSON.stringify({
+        firstName: user.firstName,
+        age: user.age,
+        username: user.username,
+        email: user.email,
+        lastName: user.lastName,
+        phone: user.phone
+      }),
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+      }
+    )
+    if (status === 200) {
+      alert(`Update Successfully`)
+      router.push('/users')
+    }
   } catch (err) {
     console.log(err)
   }
 }
+onMounted(() => fetchUpdateUser())
 </script>

@@ -45,18 +45,51 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import axios from 'axios'
+import { onMounted, reactive } from 'vue'
+import { useRoute } from 'vue-router'
+import router from '../../router'
 const post = reactive({
   body: '',
   title: '',
   tags: [],
   tag: ''
 })
+const { params } = useRoute()
+const fetchPost = async () => {
+  const { data } = await axios.get('https://dummyjson.com/posts/' + params.id)
+  post.title = data.title
+  post.body = data.body
+  post.tags = data.tags
+}
 const handleSubmit = async () => {
   try {
-    //
+    if (!post.body.length || !post.title.length || !post.tags.length) {
+      alert(`Please fill all fields `)
+      return
+    }
+    if (post.tag.length >= 3 && !post.tags.includes(post.tag.toLowerCase().trim())) {
+      post.tags.push(post.tag)
+    }
+    const { status } = await axios.put(
+      'https://dummyjson.com/posts/' + params.id,
+      JSON.stringify({
+        body: post.body,
+        tags: post.tags,
+        title: post.title
+      }),
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+      }
+    )
+    if (status === 200) {
+      alert(`Update Successfully`)
+      router.push('/posts')
+    }
   } catch (err) {
     console.log(err)
   }
 }
+onMounted(() => fetchPost())
 </script>

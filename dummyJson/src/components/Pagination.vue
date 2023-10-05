@@ -15,7 +15,7 @@
         >
       </li>
     </ul>
-  </nav> 
+  </nav>
 </template>
 <script setup>
 defineProps({

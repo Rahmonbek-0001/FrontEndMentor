@@ -1,61 +1,68 @@
-import axios from 'axios'
-import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
-const useUser = defineStore('products', () => {
-  const user = ref(null)
+import { defineStore } from 'pinia'
+import axios from 'axios'
+import { useToast } from 'vue-toast-notification'
+const url = 'https://dummyjson.com/users'
+export const useUsers = defineStore('users', () => {
+  const users = ref(null)
   const loading = ref(false)
+  const search = ref('')
+  const totalPages = ref(0)
   const limit = ref(12)
   const skip = ref(0)
-  const search = ref('')
-  const totalPage = ref(null)
-  const fetchProducts = async () => {
+  const toast = useToast()
+  // Fetch Users
+  const fetchUsers = async () => {
     try {
       loading.value = true
-      const api = await axios.get('https://dummyjson.com/users', {
+      const res = await axios.get(url, {
         params: {
           limit: limit.value,
           skip: skip.value
         }
       })
-      const data = await api.data
-      totalPage.value = Math.floor(data.total / limit.value)
-      user.value = data.users
+      users.value = await res.data.users
+      totalPages.value = Math.floor(res.data.total / limit.value)
       loading.value = false
     } catch (err) {
-      console.log(err)
       loading.value = false
+      toast.error(err.message)
     }
   }
-  const handleDeleteProduct = async (id) => {
+  // Handle Pagination
+  const handleClickPageNumber = (number) => {
+    skip.value = number * 10 - 10
+    fetchUsers()
+  }
+  // Handle Delete user
+  const handleUserDelete = async (id) => {
     try {
-      const { status } = await axios.delete(`https://dummyjson.com/users/${id}`, {
+      const { status } = await axios.delete(`${url}/${id}`, {
         method: 'DELETE'
       })
       if (status === 200) {
-        user.value = user.value?.filter((product) => product.id !== id)
+        users.value = users.value?.filter((user) => user.id !== id)
+        toast.success('Deleted User successfully')
       }
     } catch (err) {
-      console.log(err)
+      toast.error(err.message)
     }
   }
-  const filterProducts = computed(() =>
-    user?.value?.filter((user) =>
-      user.title.toLowerCase().includes(search.value.trim().toLowerCase())
+  // Computed Properties
+  const computedUsers = computed(() =>
+    users.value?.filter((user) =>
+      user.firstName.toLowerCase().includes(search.value.toLowerCase().trim())
     )
   )
-  const handlePaginationNumber = (value) => {
-    skip.value = value * limit.value - limit.value
-    fetchProducts()
-  }
+  const computedPage = computed(() => skip.value)
   return {
-    user,
+    computedUsers,
+    fetchUsers,
     loading,
-    fetchProducts,
+    totalPages,
+    handleClickPageNumber,
     search,
-    filterProducts,
-    totalPage,
-    handlePaginationNumber,
-    handleDeleteProduct
+    handleUserDelete,
+    computedPage
   }
 })
-export default useUser

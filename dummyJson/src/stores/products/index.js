@@ -29,13 +29,13 @@ const useProducts = defineStore('products', () => {
   const handleDeleteProduct = async (id) => {
     try {
       const { status } = await axios.delete(`https://dummyjson.com/products/${id}`, {
-        method:'DELETE'
+        method: 'DELETE'
       })
       if (status === 200) {
         products.value = products.value?.filter((product) => product.id !== id)
       }
     } catch (err) {
-      console.log(err);
+      console.log(err)
     }
   }
   const filterProducts = computed(() =>
@@ -45,7 +45,7 @@ const useProducts = defineStore('products', () => {
   )
   const handlePaginationNumber = (value) => {
     skip.value = value * limit.value - limit.value
-    fetchProducts() 
+    fetchProducts()
   }
   return {
     products,

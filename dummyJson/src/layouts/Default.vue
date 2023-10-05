@@ -28,7 +28,7 @@
     <footer class="font-roboto bg-gray-100 text-center py-3">
       <p>
         Design by
-        <a class="font-medium hover:underline" href="https://hikmatbek.uz">Hikmat</a>
+        <a class="font-medium hover:underline" href="https://rahmonbek.netlify.app">Rahmonbek</a>
       </p>
     </footer>
   </div>

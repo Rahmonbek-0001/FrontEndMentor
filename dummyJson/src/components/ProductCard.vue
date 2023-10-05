@@ -15,7 +15,9 @@
         {{ product.description }}
       </p>
       <div class="flex items-center justify-between">
-        <h5>Price: <strong>{{ product.price }}$</strong></h5>
+        <h5>
+          Price: <strong>{{ product.price }}$</strong>
+        </h5>
         <div class="flex gap-2">
           <router-link
             class="bg-green-500 p-2 px-3 text-xs text-white rounded hover:bg-green-600 transition-all duration-300"
@@ -36,8 +38,8 @@
   </figure>
 </template>
 <script setup>
-import { defineProps, handleError } from 'vue';
-import useProducts from '../stores/products';
+import { defineProps, handleError } from 'vue'
+import useProducts from '../stores/products'
 import handleDeleteProduct from '../stores/products'
 defineProps(['product'])
 const state = useProducts()

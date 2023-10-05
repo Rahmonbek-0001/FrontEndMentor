@@ -20,7 +20,10 @@
               :product="product"
             />
           </div>
-          <Pagination :totalPages="state.totalPage" :handleClickPageNumber="state.handlePaginationNumber" />
+          <Pagination
+            :totalPages="state.totalPage"
+            :handleClickPageNumber="state.handlePaginationNumber"
+          />
         </div>
       </div>
     </div>
