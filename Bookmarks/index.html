@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../dist/output.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
+  <title>Frontend Mentor | Bookmark landing page</title>
+  <style scoped>
+    .btn:hover {
+      --tw-border-opacity: 1;
+      border-color: hsl(231 69% 60% / var(--tw-border-opacity));
+      border-width: 2px;
+      border-radius: 0.5rem;
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+      color: black;
+    }
+
+    html::-webkit-scrollbar {
+      background: #ffffff;
+    }
+
+    html::-webkit-scrollbar-thumb {
+      background: #000000;
+    }
+  </style>
+</head>
+
+<body class="grid mx-auto py-8">
+  <!-- Header -->
+  <header class="flex justify-between flex-wrap mb-20 px-40">
+    <img class="py-1" src="../images/logo-bookmark.svg" alt="" />
+    <div class="flex gap-8 flex-wrap justify-center items-center">
+      <a href=" " class="px-4 py-1 hover:text-Soft-Red">Features</a>
+      <a href=" " class="px-4 py-1 hover:text-Soft-Red">Pricing</a>
+      <a href=" " class="px-4 py-1 hover:text-Soft-Red">Contact</a>
+      <a href=" "
+        class="bg-Soft-Red px-4 py-1 text-white hover:border-Soft-Red border-[2px] rounded-md hover:bg-[white] hover:text-Soft-Red">Login</a>
+    </div>
+  </header>
+  <!-- Section -->
+  <section class="mb-32 flex justify-between items-center p-40">
+    <!-- Left -->
+    <div class="">
+      <h1 class="text-3xl font-bold mb-4">
+        A Simple Bookmark <br />
+        Manager
+      </h1>
+      <p class="text-Grayish-Blue">
+        A clean and simple interface to organize your favourite <br />
+        websites. Open a new browser tab and see your sites load <br />
+        instantly.Try it for free.
+      </p>
+      <br />
+      <div class="flex gap-4">
+        <button
+          class="px-3 rounded-md py-3 text-sm font-semibold bg-Soft-Blue text-white hover:bg-white hover:border-Soft-Blue hover:border-[2px] hover:text-Soft-Blue shadow-xl">
+          Get it on Chrome
+        </button>
+        <button
+          class="px-3 rounded-md py-3 text-sm font-semibold bg-[#f8f5f5] shadow-lg hover:bg-white hover:border-black hover:border-[2px]">
+          Get it on Firefox
+        </button>
+      </div>
+    </div>
+    <!-- Right -->
+    <div class="">
+      <img src="../images/illustration-hero.svg" alt="" />
+    </div>
+  </section>
+  <section class="text-center">
+    <h2 class="text-4xl font-bold mb-5">Features</h2>
+    <p class="text-Grayish-Blue">
+      Our aim is to make it quick and easy for you to access your <br />
+      favourite websites. Your bookmarks sync between your devices <br />
+      so you can access them on the go.
+    </p>
+  </section>
+
+  <section>
+    <div class="flex text-center gap-5 justify-center p-10 text-Grayish-Blue">
+      <a href="" class="text-black p-5 border-b-[3px] hover:border-b-Soft-Red">Simple Bookmarking</a>
+      <a href="" class="hover:text-black p-5 border-b-[3px] hover:border-b-Soft-Red">Speedy Searching</a>
+      <a href="" class="hover:text-black p-5 border-b-[3px] hover:border-b-Soft-Red">Easy Sharing</a>
+    </div>
+  </section>
+
+  <section class="flex items-center justify-between mb-40 flex-wrap px-40">
+    <img src="../images/illustration-features-tab-1.svg" alt="" />
+    <div class="">
+      <h2 class="text-3xl font-semibold mb-4">Bookmark in one click</h2>
+      <p class="text-Grayish-Blue">
+        Organize your bookmarks however you like. Our <br />
+        simple drag-and-drop interface gives you complete <br />
+        control over how you manage your favourite sites.
+      </p>
+      <button class="text-white bg-Soft-Blue p-2 mt-4 px-5 rounded-md">
+        More Info
+      </button>
+    </div>
+  </section>
+  <section class="text-center mb-40">
+    <h2 class="text-4xl font-semibold">Download the extension</h2>
+    <p class="text-Grayish-Blue">
+      We’ve got more browsers in the pipeline. Please do let us know if <br />
+      you’ve got a favourite you’d like us to prioritize.
+    </p>
+  </section>
+  <main class="flex items-center justify-center mb-40 gap-10">
+    <div class="shadow-2xl p-10 rounded-lg w-72 grid justify-center text-center items-center px-4">
+      <img class="ml-16" src="../images/logo-chrome.svg" alt="chrome_icon" />
+      <h3 class="text-xl font-bold mt-6">Add to Chrome</h3>
+      <p class="text-Grayish-Blue mb-6">Minimum version 62</p>
+      <img class="w-full" src="../images/bg-dots.svg" alt="" />
+      <button class="bg-Soft-Blue w-full h-12 mt-4 text-white rounded-lg btn">
+        Add & Install Extension
+      </button>
+    </div>
+    <div class="shadow-2xl p-10 rounded-lg w-72 grid justify-center text-center items-center px-4 mt-20">
+      <img class="ml-16" src="../images/logo-opera.svg" alt="chrome_icon" />
+      <h3 class="text-xl font-bold mt-6">Add to Firefox</h3>
+      <p class="text-Grayish-Blue mb-6">Minimum version 55</p>
+      <img class="w-full" src="../images/bg-dots.svg" alt="" />
+      <button class="bg-Soft-Blue w-full h-12 mt-4 text-white rounded-lg btn">
+        Add & Install Extension
+      </button>
+    </div>
+    <div class="shadow-2xl p-10 rounded-lg w-72 grid justify-center text-center items-center px-4 mt-40">
+      <img class="ml-16" src="../images/logo-firefox.svg" alt="chrome_icon" />
+      <h3 class="text-xl font-bold mt-6">Add to Opera</h3>
+      <p class="text-Grayish-Blue mb-6">Minimum version 46</p>
+      <img class="w-full" src="../images/bg-dots.svg" alt="" />
+      <button class="bg-Soft-Blue w-full h-12 mt-4 text-white rounded-lg btn">
+        Add & Install Extension
+      </button>
+    </div>
+  </main>
+  <section class="grid justify-center items-center text-center">
+    <h2 class="text-4xl font-semibold my-10">Frequently Asked Questions</h2>
+    <p class="text-Grayish-Blue mb-10">
+      Here are some of our FAQs. If you have any other questions <br />
+      you’d like answered please feel free to email us.
+    </p>
+    <div class="flex items-center justify-between p-5 border-t-2">
+      <h3>What is Bookmark?</h3>
+      <img src="../images/icon-arrow.svg" alt="">
+      <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+        justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare
+        mattis. -->
+    </div>
+    <div class="flex items-center justify-between p-5 border-t-2 ">
+      <h3>How can I request a new browser?</h3>
+      <img src="../images/icon-arrow.svg" alt="">
+      <!-- Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+       ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet
+      convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
+      imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue
+      massa, ultricies non ligula. Suspendisse imperdiet. -->
+    </div>
+    <div class="flex items-center justify-between p-5 border-t-2 ">
+      <h3>Is there a mobile app?</h3>
+      <img src="../images/icon-arrow.svg" alt="">
+      <!-- Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum
+       dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra
+       mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum. -->
+    </div>
+    <div class="flex items-center justify-between p-5 border-y-2">
+      <h3>What about other Chromium browsers?</h3>
+      <img src="../images/icon-arrow.svg" alt="">
+      <!-- Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at
+      euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut
+      velit.  -->
+    </div>
+  </section>
+  <div class="flex items-center justify-center mt-20">
+    <button class="bg-Soft-Blue inline-block w-28 py-3 px-4 text-white rounded-md">More Info</button>
+  </div>
+  <footer class="mt-20 p-10 bg-Soft-Blue grid justify-center items-center text-center text-white">
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
+        class="text-cyan-500 hover:text-red-500 hover:underline duration-1000 transition-all">Frontend Mentor</a>.
+      Coded by <a href="https://rahmonbek.netlify.app"
+        class="text-cyan-500 hover:text-red-500 hover:underline duration-1000 transition-all">Rahmonbek
+        Madaminov</a>.
+    </p>
+    <div class="">
+      <p class="uppercase">35,000+ already joined</p>
+      <h3 class="text-3xl font-semibold my-7">Stay up-to-date with what <br> we’re
+        doing</h3>
+      <form class="w-full flex gap-5">
+        <input type="email" class="p-3 rounded-md text-Grayish-Blue grow" placeholder="Enter your email addres">
+        <button
+          class="bg-Soft-Red inline-block w-28 p-3 text-white rounded-md border-Soft-Red border-[2px] hover:bg-white hover:text-Soft-Red">Contact
+          Us</button>
+      </form>
+    </div>
+  </footer>
+  <div class="p-5 bg-Very-Dark-Blue -mb-20 px-40 flex justify-between items-center">
+    <div class="flex text-white gap-5 ">
+      <img class="mr-7" src="../images/logo-bookmark-light.svg" alt="">
+      <a href="#" class="hover:text-Soft-Red">Features</a>
+      <a href="#" class="hover:text-Soft-Red">Pricing</a>
+      <a href="#" class="hover:text-Soft-Red">Contact</a>
+    </div>
+    <div class="flex gap-10">
+      <img src="../images/icon-facebook.svg" class="hover:fill-Soft-Red" alt="icon">
+      <img src="../images/icon-twitter.svg" class="hover:fill-Soft-Red" alt="icon">
+    </div>
+  </div>
+
+  <!-- <footer>
+  </footer> 
+Intelligent search Our powerful search feature will help you find saved
+    sites in no time at all. No need to trawl through all of your bookmarks.
+    More Info Share your bookmarks Easily share your bookmarks and collections
+    with others. Create a shareable link that you can send at the click of a
+    button. More Info-->
+</body>
+
+</html>
