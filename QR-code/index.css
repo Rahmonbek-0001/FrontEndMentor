@@ -1,0 +1,105 @@
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 0;
+}
+
+body {
+    background-color: hsl(185, 75%, 39%);
+}
+
+.bg-top {
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+
+.bg-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.qutilar {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.card-top {
+    border-radius: 10px 10px 0 0;
+}
+
+.box1 {
+    margin-top: 170px;
+    width: 350px;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+.box2 {
+    text-align: center;
+    width: 350px;
+    border-radius: 0 0 10px 10px;
+    background-color: white;
+
+}
+
+.bow2-ichi {
+    position: relative;
+}
+
+.bow2-ichi img {
+    border: 5px solid wheat;
+    display: inline;
+    position: relative;
+    border-radius: 50%;
+    bottom: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.quti {
+    display: flex;
+    justify-content: center;
+}
+
+.quti p {
+    padding: 6px 0 0 20px;
+    color: hsl(227, 10%, 46%);
+}
+
+.main {
+    margin: 0;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color: hsl(227, 10%, 46%);
+}
+
+.quti-oxiri {
+    position: relative;
+    text-align: center;
+    margin: 20px;
+    border-top: solid hsl(0, 0%, 59%) 1px;
+    left: -20px;
+    width: 310px;
+    padding: 20px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
+
+.footer h3 {
+    margin: 0 20px;
+    display: inline-block;
+}
+
+.footer p {
+    display: inline-block;
+    color:  hsl(0, 4%, 28%);
+}
+.attribution{
+    display: grid;
+    text-align: center;
+}
