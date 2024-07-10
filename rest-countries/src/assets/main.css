@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@layer {
+  .flag-card {
+    @apply bg-white shadow-md rounded-lg;
+    width: calc(25% - 60px);
+    height: 350px;
+  }
+
+  .info-side {
+    width: calc(50% - 60px);
+  }
+
+  @media screen and (max-width: 1024px) {
+    .flag-card {
+      width: calc(33% - 60px);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .flag-card {
+      width: calc(50% - 60px);
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .flag-card {
+      width: 100%;
+    }
+  }
+}
