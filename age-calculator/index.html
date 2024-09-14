@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Age Calculator</title>
+  </head>
+
+  <body>
+    <form class="container">
+      <div class="base flex">
+        <div class="block grid">
+          <label for="date" class="title">Day</label>
+          <input
+            type="text"
+            name="date"
+            id="date"
+            placeholder="dd"
+            required
+            minlength="1"
+            maxlength="2"
+          />
+        </div>
+        <div class="block grid">
+          <label for="month" class="title">Month</label>
+          <input
+            type="text"
+            name="month"
+            id="month"
+            placeholder="mm"
+            required
+            minlength="1"
+            maxlength="2"
+          />
+        </div>
+        <div class="block grid">
+          <label for="year" class="title">Year</label>
+          <input
+            type="text"
+            name="year"
+            id="year"
+            placeholder="yyyy"
+            minlength="4"
+            maxlength="4"
+          />
+        </div>
+      </div>
+      <div class="w-full btn">
+        <div class="stick"></div>
+        <button type="button" class="btn" onclick="age()">
+          <img src="assets/images/icon-arrow.svg" alt="arrow-icon" />
+        </button>
+      </div>
+      <div class="age" id="age">
+        <div class="ageY">
+          <span id="ageY" class="number ageY">--</span>
+          <h2 class="ages">Year</h2>
+        </div>
+        <div class="ageM">
+          <span id="ageM" class="number ageM">--</span>
+          <h2 class="ages">Month</h2>
+        </div>
+        <div class="ageD">
+          <span id="ageD" class="number ageD">--</span>
+          <h2 class="ages">Days</h2>
+        </div>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
+ 
