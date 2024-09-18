@@ -12,7 +12,7 @@ function age() {
   if (m1 > m2) { m2 = m2 + 12; y2 = y2 - 1; }
   let d = d2 - d1.value;
   let m = m2 - m1;
-  let y = y2 - y1 ;
+  let y = y2 - y1 + 1;
   document.getElementById("age").innerHTML =
     `<div style="display: flex; align-items: center; height: inherit;"><h2 id="ages">${y}-</h2><h3 class="ages">Year</h3></div>` +
     `<div style="display: flex; gap: 15px; align-items: center; height: inherit;"><h2 id="ages">${m}-</h2><h3 class="ages">Month </h3></div>` +
