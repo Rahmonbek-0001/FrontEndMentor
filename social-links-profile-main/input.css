@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Inter", sans-serif;
+}
+
+.links {
+    @apply bg-grays-700 text-center py-3 font-semibold rounded-lg hover:bg-[#c5f82a] hover:text-gray-800 cursor-pointer;
+}
