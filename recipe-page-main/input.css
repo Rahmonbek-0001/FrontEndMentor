@@ -16,3 +16,11 @@
 .as {
   font-size: 5px;
 }
+
+b {
+  @apply text-browns-800;
+}
+
+p {
+  @apply text-stones-600;
+}
