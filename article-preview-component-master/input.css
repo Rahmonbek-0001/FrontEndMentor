@@ -1,4 +1,10 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.share {
+    background: url(images/icon-share.svg);
+}
+.share:active {
+    background: url(images/icon-share-2.svg);
+}
