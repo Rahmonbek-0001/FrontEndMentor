@@ -1,52 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-charcoal-grey grid justify-center items-center h-[100vh]">
+    <img
+      class="min-[425px]:hidden bg-white w-[100vw] border-white border-b-8"
+      src="assets/images/illustration-sign-up-mobile.svg"
+      alt=""
+    />
+    <div
+      class="flex bg-white py-7 px-5 min-[425px]:pl-16 pl-4 rounded-[40px] items-center justify-center gap-16 max-[425px]:rounded-none"
+    >
+      <!-- left -->
+      <div class="">
+        <h1 class="text-6xl max-[426px]:text-3xl font-bold text-charcoal-grey">
+          Stay updated!
+        </h1>
+        <p class="my-8">
+          Join 60,000+ product managers receiving monthly <br />
+          updates on:
+        </p>
+        <ul class="grid gap-3">
+          <li class="flex gap-4">
+            <img src="assets/images/icon-list.svg" alt="" />Product discovery
+            and building what matters
+          </li>
+          <li class="flex gap-4">
+            <img src="assets/images/icon-list.svg" alt="" />Measuring to ensure
+            updates are a success
+          </li>
+          <li class="flex gap-4">
+            <img src="assets/images/icon-list.svg" alt="" />And much more!
+          </li>
+        </ul>
+        <form class="grid mt-10 gap-3">
+          <label for="email" class="text-xs font-bold">Email address</label>
+          <input
+            class="border hover:border-2 border-ark-slate-grey rounded-md hover:cursor-pointer py-4 px-3"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email@company.com"
+          />
+          <button class="text-white bg-ark-slate-grey py-4 rounded-md mt-2">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+      <!-- right -->
+      <img
+        class="max-md:w-[300px] max-[425px]:hidden"
+        src="assets/images/illustration-sign-up-desktop.svg"
+        alt=""
+      />
+      <script src="script.js"></script>
+    </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  <!-- Sign-up form start -->
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
+    <!--
 
   A confirmation email has been sent to ash@loremcompany.com. 
   Please open it and click the button inside to confirm your subscription.
 
-  Dismiss message
+  Dismiss message -->
 
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Success message end -->
+  </body>
 </html>
+<!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+</div> -->
