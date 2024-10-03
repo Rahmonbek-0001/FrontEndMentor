@@ -2669,7 +2669,7 @@ nav {
   position: relative;
   height: 30rem;
   padding: 2rem;
-  background: url("../images/image-hero-mobile.jpg") center no-repeat;
+  background: url("images/image-hero-mobile.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -3573,7 +3573,7 @@ footer {
 
 @media (min-width: 992px) {
   nav {
-    background: url("../images/image-hero-desktop.jpg") center no-repeat;
+    background: url("images/image-hero-desktop.jpg") center no-repeat;
     background-size: cover;
   }
 }
