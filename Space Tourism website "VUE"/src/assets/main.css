@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home {
+  background-image: url(/home/background-home-desktop.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+.destination {
+  background: url(../../public/destination/background-destination-desktop.jpg);
+}
+.crew {
+  background: url(../../public/crew/background-crew-desktop.jpg);
+}
+.technology {
+  background: url(../../public/technology/background-technology-desktop.jpg);
+}
