@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home {
+  background-image: url(/home/background-home-desktop.jpg);
+  background-size: cover; 
+  background-position: center; 
+  width: 100vw;
+  height: 100vh; 
+  background-repeat: no-repeat; 
+}
+.destination {
+  background: url(/destination/background-destination-desktop.jpg);
+  background-size: cover; 
+  background-position: center; 
+  width: 100vw;
+  height: 100vh; 
+  background-repeat: no-repeat; 
+}
+.crew {
+  background: url(/crew/background-crew-desktop.jpg);
+  background-size: cover; 
+  background-position: center; 
+  width: 100vw;
+  height: 100vh; 
+  background-repeat: no-repeat; 
+}
+.technology {
+  background: url(/technology/background-technology-desktop.jpg);
+  background-size: cover; 
+  background-position: center; 
+  width: 100vw;
+  height: 100vh; 
+  background-repeat: no-repeat; 
+}

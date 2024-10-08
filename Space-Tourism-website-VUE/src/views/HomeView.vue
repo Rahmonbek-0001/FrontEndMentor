@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <main class="home text-white  ">
+  <main class="home text-white">
     a
   </main>
 </template>
