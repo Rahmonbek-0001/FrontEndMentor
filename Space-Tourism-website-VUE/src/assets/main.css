@@ -4,6 +4,7 @@
 
 .home {
   background-image: url(/home/background-home-desktop.jpg);
+  position: absolute;
   background-size: cover; 
   background-position: center; 
   width: 100vw;
@@ -33,4 +34,8 @@
   width: 100vw;
   height: 100vh; 
   background-repeat: no-repeat; 
+}
+
+.nav-list {
+  backdrop-filter: blur(35px);
 }

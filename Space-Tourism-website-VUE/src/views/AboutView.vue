@@ -1,8 +1,13 @@
 <template>
-  <div class="about">
+  <main class="about">
+    <Header />
     <h1>This is an about page</h1>
-  </div>
+  </main>
 </template>
+
+<script setup>
+import Header from "../components/Header.vue"
+</script>
 
 <style>
 @media (min-width: 1024px) {
