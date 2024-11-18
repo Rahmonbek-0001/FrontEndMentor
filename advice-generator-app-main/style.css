@@ -1,0 +1,123 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-clr-cyan: hsl(193, 38%, 86%);
+    --primary-clr-green: hsl(150, 100%, 66%);
+    --neutral-clr: hsl(217, 19%, 38%);
+    --neutral-clr-dark: hsl(217, 19%, 24%);
+    --neutral-clr-blue: hsl(218, 23%, 16%);
+    
+    --ff: 'Manrope', sans-serif;
+
+    --fs-q: 28px;
+
+    --fw-xb: 800;
+
+    --spacer: 1rem;
+
+    --br: 15px;
+}
+
+body {
+    background: var(--neutral-clr-blue);
+    font-family: var(--ff);
+    font-weight: var(--fw-xb);
+    min-height: 100vh;
+    text-align: center;
+}
+
+#container {
+    margin: 50% auto;
+    padding: var(--spacer);
+    /*background: hsla(217, 19%, 38%, 0.5);*/
+    background: var(--neutral-clr-dark);
+    border-radius: var(--br);
+    max-width: 80%;
+}
+
+#wrapper {
+    margin: var(--spacer) var(--spacer) 2rem var(--spacer);
+    position: relative;
+    padding: 0 1rem 2.5rem 1rem;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--primary-clr-green);
+    text-transform: uppercase;
+    margin: 5px 0 25px;
+}
+
+#advice::after {
+    content: url(./images/pattern-divider-mobile.svg);
+    width: 100%;
+    position: absolute;
+    left: -25px;
+    bottom: 0;
+}
+
+.advice-text {
+    max-width: 420px;
+    color: var(--primary-clr-cyan);
+    font-size: 20px;
+    font-weight: var(--fw-xb);
+}
+
+.icon-div {
+    max-width: 420px;    
+}
+
+.btn-div {
+    margin: 0 auto -40px;
+}
+
+#getAdvice {
+    background: var(--primary-clr-green);
+    border: none;
+    width: 50px;
+    height: 50px;
+    line-height: 64px;
+    border-radius: 50%;
+}
+
+#getAdvice:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 25px var(--primary-clr-green);
+}
+
+#getAdvice:active {
+    transform: scale(0.98);
+    box-shadow: 1px 2px 2px 1px var(--neutral-clr-dark);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: #fff;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 420px) {
+
+    #container {
+        margin: 30vh auto;
+        max-width: 400px;
+    }
+
+    #advice::after {
+        content: url(./images/pattern-divider-desktop.svg);
+        left: -40px;
+    }
+}
