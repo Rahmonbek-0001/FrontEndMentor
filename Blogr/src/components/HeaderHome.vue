@@ -53,7 +53,7 @@
             <img src="../images/icon-arrow-dark.svg" alt="arrow" />
             <!--    -->
             <div v-if="toggle3"></div>
-            <div v-else class="bg-white p-5 grid rounded-xl text-black ">
+            <div v-else class="bg-white p-5 grid rounded-xl text-black top-10 absolute">
               <a href="#">Contact</a>
               <a href="#">Newsletter</a>
               <a href="#">LinkedIn</a>

@@ -25,10 +25,6 @@
 					<TodoFilter />
 				</div>
 			</div>
-
-			<!-- <p class="text-center text-sm text-terciary-400 dark:text-terciary-600 mt-8">
-				Drag and drop to reorder list
-			</p> -->
 		</Container>
 	</div>
 </template>
