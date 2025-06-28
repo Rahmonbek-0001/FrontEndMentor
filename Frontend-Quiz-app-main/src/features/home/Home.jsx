@@ -13,7 +13,6 @@ function Home() {
   useEffect(() => {
     dispatch(setQuizzes(data));
   }, [dispatch, data]);
-
   return (
     <div className="desktop:grid-cols-1 desktop:gap-24 mobile:gap-16 grid grid-cols-2">
       <div>
